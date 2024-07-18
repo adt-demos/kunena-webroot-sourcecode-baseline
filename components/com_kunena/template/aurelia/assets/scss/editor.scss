@@ -1,0 +1,118 @@
+/**
+* Kunena Component
+* $package Kunena.Template.Aurelia
+*
+* markItUp! Universal MarkUp Engine, JQuery plugin
+* By Jay Salvat - http://markitup.jaysalvat.com/
+*
+* $Copyright (C) 2008 - 2024 Kunena Team. All rights reserved.
+* $license https://www.gnu.org/copyleft/gpl.html GNU/GPL
+* $link https://www.kunena.org
+**/
+
+/*------------------------------------------------------------------
+BBCODE BUTTONS
+-------------------------------------------------------------------- */
+
+tr {
+  td.kpostbuttons {
+    select.selectbox {
+      position: relative;
+      bottom: 5px;
+    }
+  }
+}
+
+textarea.form-control {
+  max-width: 100% !important;
+}
+
+.form-horizontal .controls {
+  margin-left: 90px;
+}
+
+.form-horizontal .control-label {
+  width: auto;
+}
+
+.ktxtarea {
+  margin-left: -80px;
+}
+
+#kbbcode-smilies-button {
+  background-position: -108px -18px;
+}
+
+.kbbcode-preview-bottom {
+  min-height: 150px;
+  padding: 4px 12px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.dropzone .message {
+  filter: none;
+  opacity: 1;
+}
+
+.dropzone {
+  min-height: 120px;
+  padding: 23px;
+  background: rgba(0, 0, 0, .03);
+  border: 1px solid rgba(0, 0, 0, .03);
+  border-radius: 3px;
+}
+
+.dropzone .default.message {
+  background: no-repeat 0 0;
+  filter: none;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+#klabel_info_drop_browse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#files {
+  padding-bottom: 10px;
+}
+
+#files button.btn {
+  margin-right: 5px;
+}
+
+#files p {
+  margin: 15px 0 0;
+}
+
+#kbbcode-preview {
+  height: auto !important;
+  margin-bottom: 35px;
+}
+
+.wysibb-text-editor {
+  min-height: 300px !important;
+}
+
+#iconset_inject .inline:hover {
+  cursor: pointer;
+}
+
+.kpoll-time-to-live-input {
+  margin-left: -30px !important;
+}
+
+/**
+Part for Kunena icons for SCEditor
+*/
+.sceditor-button-soundcloud div { background: url("/media/kunena/core/images/soundcloud.png"); }
+.sceditor-button-ebay div { background: url("/media/kunena/core/images/ebay.png"); }
+.sceditor-button-instagram div { background: url("/media/kunena/core/images/instagram.png"); }
+.sceditor-button-twitter div { background: url("/media/kunena/core/images/tweet.png"); }
+.sceditor-button-map div { background: url("/media/kunena/core/images/map.png"); }
+.sceditor-button-video div { background: url("/media/kunena/core/images/film.png"); }
+.sceditor-button-poll div { background: url("/media/kunena/core/images/poll.png"); }

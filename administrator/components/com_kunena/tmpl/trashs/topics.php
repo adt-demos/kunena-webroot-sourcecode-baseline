@@ -1,0 +1,107 @@
+<?php
+
+/**
+ * Kunena Component
+ *
+ * @package         Kunena.Administrator.Template
+ * @subpackage      Trash
+ *
+ * @copyright       Copyright (C) 2008 - 2024 Kunena Team. All rights reserved.
+ * @license         https://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @link            https://www.kunena.org
+ **/
+
+defined('_JEXEC') or die();
+
+use Joomla\CMS\Factory;
+use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\CMS\Language\Text;
+use Joomla\CMS\Layout\LayoutHelper;
+use Kunena\Forum\Libraries\Route\KunenaRoute;
+use Kunena\Forum\Libraries\Version\KunenaVersion;
+
+/** @var \Joomla\CMS\WebAsset\WebAssetManager $wa */
+$wa = $this->document->getWebAssetManager();
+$wa->useScript('table.columns')
+    ->useScript('multiselect');
+
+$app       = Factory::getApplication();
+$user      = $this->getCurrentUser();
+$userId    = $user->id;
+$listOrder = $this->escape($this->state->get('list.ordering'));
+$listDirn  = $this->escape($this->state->get('list.direction'));
+?>
+
+<form action="<?php echo KunenaRoute::_('administrator/index.php?option=com_kunena&view=trashs') ?>" method="post" id="adminForm" name="adminForm">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="j-main-container" class="j-main-container">
+                <?php
+                // Search tools bar
+                echo LayoutHelper::render('joomla.searchtools.default', ['view' => $this]);
+                ?>
+                <table class="table itemList" id="topicsList">
+                    <thead>
+                        <tr>
+                            <td class="w-1 text-center">
+                                <?php echo HTMLHelper::_('grid.checkall'); ?>
+                            </td>
+                            <td scope="col" class="w-1">
+                                <?php echo HTMLHelper::_('searchtools.sort', 'COM_KUNENA_TRASH_ID', 'id', $listDirn, $listOrder); ?>
+                            </td>
+                            <td scope="col" class="w-40">
+                                <?php echo HTMLHelper::_('searchtools.sort', 'COM_KUNENA_TRASH_TITLE', 'title', $listDirn, $listOrder); ?>
+                            </td>
+                            <th scope="col" class="w-20">
+                                <?php echo HTMLHelper::_('searchtools.sort', 'COM_KUNENA_TRASH_CATEGORY', 'category', $listDirn, $listOrder); ?>
+                            </th>
+                            <th scope="col" class="w-10">
+                                <?php echo HTMLHelper::_('searchtools.sort', 'COM_KUNENA_TRASH_AUTHOR', 'author', $listDirn, $listOrder); ?>
+                            </th>
+                            <th scope="col" class="w-5">
+                                <?php echo HTMLHelper::_('searchtools.sort', 'COM_KUNENA_TRASH_IP', 'ip', $listDirn, $listOrder); ?>
+                            </th>
+                            <th scope="col" class="w-5">
+                                <?php echo HTMLHelper::_('searchtools.sort', 'COM_KUNENA_TRASH_DATE', 'time', $listDirn, $listOrder); ?>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $i      = 0;
+                        $itemid = KunenaRoute::fixMissingItemID();
+
+                        foreach ($this->items as $id => $row) :
+                        ?>
+                            <tr>
+                                <td><?php echo HTMLHelper::_('grid.id', $i++, intval($row->id)) ?></td>
+                                <th><?php echo intval($row->id); ?></th>
+                                <th>
+                                    <a href="<?php echo KunenaRoute::_('index.php?option=com_kunena&view=topic&catid=' . $row->category_id . '&id=' . $row->id . '&Itemid=' . $itemid); ?>" target="_blank"><?php echo $this->escape($row->title); ?></a>
+                                </th>
+                                <td><?php echo $this->escape($row->category); ?></td>
+                                <td><?php echo $this->escape($row->author); ?></td>
+                                <td><?php echo $this->escape($row->ip); ?></td>
+                                <td><?php echo HTMLHelper::date($row->time, Text::_('DATE_FORMAT_LC6')); ?></td>
+                            </tr>
+                        <?php
+                        endforeach; ?>
+                    </tbody>
+                </table>
+
+                <?php // load the pagination. 
+                ?>
+                <?php echo $this->pagination->getListFooter(); ?>
+
+                <input type="hidden" name="type" value="topics" />
+                <input type="hidden" name="layout" value="topics" />
+                <input type="hidden" name="task" value="" />
+                <input type="hidden" name="boxchecked" value="0" />
+                <?php echo HTMLHelper::_('form.token'); ?>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="mt-3 text-center small">
+    <?php echo KunenaVersion::getLongVersionHTML(); ?>
+</div>

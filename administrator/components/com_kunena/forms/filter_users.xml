@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			inputmode="search"
+			label="COM_USERS_SEARCH_USERS"
+			description=""
+			hint="JSEARCH_FILTER" />
+		<field
+			name="signature"
+			type="list"
+			label="COM_KUNENA_GEN_SIGNATURE"
+			class="js-select-submit-on-change"
+			default=""
+			validate="options">
+			<option value="">COM_KUNENA_FILTER_SELECT_SIGNATURE</option>
+			<option value="1">COM_KUNENA_FIELD_LABEL_YES</option>
+			<option value="0">COM_KUNENA_FIELD_LABEL_NO</option>
+		</field>
+		<field
+			name="enabled"
+			type="list"
+			label="COM_KUNENA_USRL_ENABLED"
+			class="js-select-submit-on-change"
+			default=""
+			validate="options">
+			<option value="">COM_KUNENA_FILTER_SELECT_ENABLED</option>
+			<option value="0">COM_KUNENA_FIELD_LABEL_YES</option>
+			<option value="1">COM_KUNENA_FIELD_LABEL_NO</option>
+		</field>
+		<field
+			name="banned"
+			type="list"
+			label="COM_KUNENA_USRL_BANNED"
+			class="js-select-submit-on-change"
+			default=""
+			validate="options">
+			<option value="">COM_KUNENA_FILTER_SELECT_BANNED</option>
+			<option value="1">COM_KUNENA_FIELD_LABEL_YES</option>
+			<option value="0">COM_KUNENA_FIELD_LABEL_NO</option>
+		</field>
+		<field
+			name="moderator"
+			type="list"
+			label="COM_KUNENA_VIEW_MODERATOR"
+			class="js-select-submit-on-change"
+			default=""
+			validate="options">
+			<option value="">COM_KUNENA_FILTER_SELECT_MODERATOR</option>
+			<option value="1">COM_KUNENA_FIELD_LABEL_YES</option>
+			<option value="0">COM_KUNENA_FIELD_LABEL_NO</option>
+		</field>
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			class="js-select-submit-on-change"
+			default="username ASC"
+			validate="options">
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="username ASC">COM_KUNENA_FILTER_FIELD_USERNAME_ASC</option>
+			<option value="username DESC">COM_KUNENA_FILTER_FIELD_USERNAME_DESC</option>
+			<option value="email ASC">COM_KUNENA_FILTER_FIELD_EMAIL_ASC</option>
+			<option value="email DESC">COM_KUNENA_FILTER_FIELD_EMAIL_DESC</option>
+			<option value="ip ASC">COM_KUNENA_FILTER_FIELD_IP_ASC</option>
+			<option value="ip DESC">COM_KUNENA_FILTER_FIELD_IP_DESC</option>
+			<option value="signature ASC">COM_KUNENA_FILTER_FIELD_SIGNATURE_ASC</option>
+			<option value="signature DESC">COM_KUNENA_FILTER_FIELD_SIGNATURE_DESC</option>
+			<option value="enabled ASC">COM_KUNENA_FILTER_FIELD_ENABLED_ASC</option>
+			<option value="enabled DESC">COM_KUNENA_FILTER_FIELD_ENABLED_DESC</option>
+			<option value="banned ASC">COM_KUNENA_FILTER_FIELD_BANNED_ASC</option>
+			<option value="banned DESC">COM_KUNENA_FILTER_FIELD_BANNED_DESC</option>
+			<option value="moderator ASC">COM_KUNENA_FILTER_FIELD_MODERATOR_ASC</option>
+			<option value="moderator DESC">COM_KUNENA_FILTER_FIELD_MODERATOR_DESC</option>
+			<option value="id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="id DESC">JGRID_HEADING_ID_DESC</option>
+		</field>
+		<field
+			name="limit"
+			type="limitbox"
+			label="JGLOBAL_LIST_LIMIT"
+			default="25"
+			class="js-select-submit-on-change" />
+	</fields>
+</form>

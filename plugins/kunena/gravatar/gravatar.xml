@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension>
+<extension version="2.5" type="plugin" group="kunena" method="upgrade">
+    <name>plg_kunena_gravatar</name>
+    <version>6.3.3</version>
+    <creationDate>2024-07-16</creationDate>
+    <author>Kunena Team</author>
+    <authorEmail>Kunena@kunena.org</authorEmail>
+    <authorUrl>https://www.kunena.org</authorUrl>
+    <copyright>www.kunena.org</copyright>
+    <license>GNU/GPLv3 or later</license>
+    <description>PLG_KUNENA_GRAVATAR_DESCRIPTION</description>
+    <namespace>Kunena\Forum\Plugin\Kunena\Gravatar</namespace>
+    <changelogurl>https://update.kunena.org/changelog/6.3.3.xml</changelogurl>
+    <files>
+        <filename plugin="gravatar">gravatar.php</filename>
+        <filename>KunenaAvatarGravatar.php</filename>
+        <folder>language</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="avatar" type="list" default="1" label="PLG_KUNENA_GRAVATAR_AVATAR"
+                       description="PLG_KUNENA_GRAVATAR_AVATAR_DESC"
+                       class="inputbox">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="default_image" type="text" label="PLG_KUNENA_GRAVATAR_DEFAULT_IMAGE"
+                       description="PLG_KUNENA_GRAVATAR_DEFAULT_IMAGE_DESC"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

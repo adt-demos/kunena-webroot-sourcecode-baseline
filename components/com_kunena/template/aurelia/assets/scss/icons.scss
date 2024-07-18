@@ -1,0 +1,202 @@
+/**
+* Kunena Component
+* $package Kunena.Template.Aurelia
+*
+* $copyright     Copyright (C) 2008 - 2024 Kunena Team. All rights reserved.
+* $license https://www.gnu.org/copyleft/gpl.html GNU/GPL
+* $link https://www.kunena.org
+**/
+
+.large-kicon {
+  width: 18px;
+  height: 18px;
+  margin-right: 0;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.glyphicon .glyphicon-feed::before {
+  color: #ffa500;
+}
+
+.kfile-input {
+  display: block;
+  overflow: hidden;
+}
+
+.kspoiler-wrapper {
+  width: 100%;
+  min-height: 5px;
+  background-color: #ffc;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.kicon {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.kspoiler-header {
+  cursor: pointer;
+}
+
+.kmark-read {
+  width: 16px;
+  height: 16px;
+}
+
+div.krss-block {
+  float: right;
+}
+
+.kspoiler {
+  cursor: auto;
+}
+
+.kspoiler-expand,
+.kspoiler-hide {
+  color: #888;
+}
+
+.ktopicpoll {
+  float: right;
+  width: 32px;
+  height: 32px;
+  margin: 2px;
+}
+
+.kforumbottom {
+  width: 18px;
+  height: 15px;
+}
+
+.kspoiler-content {
+  margin: 10px 5px;
+}
+
+.kfavoritestar {
+  width: 16px;
+  height: 16px;
+}
+
+.kspoiler-title {
+  font-weight: bold;
+}
+
+.krss-small {
+  width: 16px;
+  height: 16px;
+}
+
+.kforumtop {
+  width: 18px;
+  height: 15px;
+}
+
+.kgooglemap {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+
+  img {
+    max-width: none !important;
+  }
+}
+
+.kicon-folder {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("media/kunena/core/images/icons/folder_nonew.png") no-repeat left center;
+}
+
+.kicon-folder.knewchar {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("media/kunena/core/images/icons/folder.png") no-repeat left center;
+}
+
+.kicon-folder-sm {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("media/kunena/core/images/icons/folder_nonew_sm.png") no-repeat left center;
+}
+
+.kicon-folder-sm-new {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("media/kunena/core/images/icons/folder_sm.png") no-repeat left center;
+}
+
+.b2-3x {
+  padding-top: 10px;
+  font-size: 32px;
+}
+
+.b2-7x {
+  padding-top: 10px;
+  font-size: 52px;
+}
+
+.user-circle.user-default {
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  line-height: 1.33;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.user-circle.user-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 52px;
+  line-height: 1.33;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.icon.icon-one-fine-dot {
+  margin-right: 0;
+}
+
+.icon.icon-one-fine-dot:before {
+  font-size: 2em;
+  content: "\25cf";
+}
+
+.glyphicon.glyphicon-one-fine-dot:before {
+  font-size: 1.5em;
+  content: "\25cf";
+}
+
+svg {
+  width: 18px;
+  height: 18px;
+}
+
+#iconset_topicList svg {
+  width: 24px;
+  height: 24px;
+}
+
+#kcat-icon svg,
+.col-md-3 svg,
+.category th svg,
+footer svg,
+.col-md-1 svg,
+.category-stickymsg a svg,
+[class*="category-"] th svg {
+  width: 34px;
+  height: 34px;
+}
